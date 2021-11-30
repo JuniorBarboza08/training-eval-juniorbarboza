@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="col-sm-6">
+        <form th:action="@{/save}" th:object="$client" method="POST">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Clients</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="">ID</label>
+                        <input th:field="*{id}" type="text" class="from-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input th:field="*{name}" type="text" class="from-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Lastname</label>
+                        <input th:field="*{lastName}" type="text" class="from-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input th:field="*{phoneNumber}" type="text" class="from-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input th:field="*{password}" type="password" class="from-control">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Save" class="btn btn-success">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
